@@ -1,0 +1,90 @@
+form {
+  padding-bottom: 10px;
+  border-spacing: 2px;
+}
+
+div {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-bottom: #4a5bf4 solid 3px;
+}
+
+input {
+  font: 1em sans-serif;
+  text-align: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  position: relative;
+}
+
+td, th {
+  border: 2px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+button {
+  background-color: #2293f5;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 187, 255);
+}
+
+button:active {
+  color: rgb(9, 231, 168);
+  background-color: rgb(83, 205, 183);
+}
+
+tr:nth-child(even) {
+  background-color: #c8d6dd;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #907a76;
+}
+
+.active {
+  background-color: rgb(40, 211, 49);
+}
+  
