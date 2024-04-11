@@ -2,9 +2,9 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import './App.css';
 import { NavbarProvider } from "./components/NavbarContext";
-import { CrudProvider, useCrudContext } from "./components/CrudContext";
-import DeleteData from "./components/DeleteData";
+import { CrudProvider, useCrudContext} from "./components/CrudContext";
 import Form from "./components/Form";
+import DeleteData from "./components/DeleteData";
 
 
 
@@ -44,11 +44,11 @@ function App() {
 }
 
 function DataRows() {
-  const { data, setFormData } = useCrudContext();
-  const handleEdit = id => {
-    const editedItem = data.find(item => item.id === id);
-    setFormData(editedItem);
-};
+  const { data } = useCrudContext();
+  // const handleEdit = id => {
+//     const editedItem = data.find(item => item.id === id);
+//     setFormData(editedItem);
+// };
 
   return data.map(item => (
     <tr key={item.id}>
@@ -60,9 +60,10 @@ function DataRows() {
       <td>{item.date}</td>
       <td>
         <DeleteData id={item.id} />
-        <button onClick={() => handleEdit(item.id)}>Edit</button>
+        {/* <button onClick={() => handleEdit(item.id)}>Edit</button> */}
       </td>
     </tr>
   ));
 }
+
 export default App;
