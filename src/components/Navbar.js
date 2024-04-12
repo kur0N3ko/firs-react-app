@@ -1,4 +1,5 @@
 import { useNavbar } from './NavbarContext';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 const { isNavbarVisible, toggleNavbarVisibility, showNavbar } = useNavbar();
@@ -13,14 +14,14 @@ const handleShowNavbar = () => {
 return (
     <>
     <nav style={{ display: isNavbarVisible ? 'block' : 'none' }}>
-    <button onClick={toggleNavbarVisibility}>Hide Navbar</button>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+        <button onClick={toggleNavbarVisibility}>Hide Navbar</button>  
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+            </ul>
     </nav>
-    <button onClick={handleShowNavbar}>Show Navbar</button>
+        <button onClick={handleShowNavbar}>Show Navbar</button>
 </>
 );
 }
