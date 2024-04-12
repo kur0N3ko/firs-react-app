@@ -14,19 +14,17 @@ function App() {
 
   
   return (
-    
-
-    <>
-  
+    <> 
     <Router>
-      <NavbarProvider><Navbar />
-      <div className="App">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-          </Switch>
-      </div>
+      <NavbarProvider>
+        <Navbar />
+        <div className="App">
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
+            </Switch>
+        </div>
       </NavbarProvider>
     </Router>
     <div className="Form">
