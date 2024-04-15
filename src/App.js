@@ -8,7 +8,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom/cjs/rea
 import Home from "./components/PageComponent/Home";
 import About from "./components/PageComponent/About";
 import Contact from "./components/PageComponent/Contact";
-// import TableComponent from "./components/TableComponent";
 
 function App() {
   return (
@@ -20,10 +19,10 @@ function App() {
             <Switch>
               <Route path="/" exact component={Home}>
                 <div className="Form">
+                  <hr/>
                   <CrudProvider>
-                    <h1>Scheduling System</h1>
+                    <h2>Scheduling System</h2>
                       <Form/>
-                        <hr/>
                   </CrudProvider>
                 </div>
               </Route>

@@ -13,17 +13,17 @@ const handleShowNavbar = () => {
 
 return (
     <>
-    <nav style={{ display: isNavbarVisible ? 'block' : 'none' }}>
-        <button onClick={toggleNavbarVisibility}>Hide Navbar</button>  
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-            </ul>
-    </nav>
-        <button onClick={handleShowNavbar}>Show Navbar</button>
-</>
-);
+        <nav style={{ display: isNavbarVisible ? 'block' : 'none' }}>
+            <button onClick={toggleNavbarVisibility}>Hide Navbar</button>  
+                <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                </ul>
+        </nav>
+            <button onClick={handleShowNavbar}>Show Navbar</button>
+    </>
+    );
 }
 
 export default Navbar;
