@@ -8,11 +8,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom/cjs/rea
 import Home from "./components/PageComponent/Home";
 import About from "./components/PageComponent/About";
 import Contact from "./components/PageComponent/Contact";
-import TableComponent from "./components/TableComponent";
+// import TableComponent from "./components/TableComponent";
 
 function App() {
-
-  
   return (
     <> 
     <Router>
@@ -26,7 +24,6 @@ function App() {
                     <h1>Scheduling System</h1>
                       <Form/>
                         <hr/>
-                        <TableComponent />
                   </CrudProvider>
                 </div>
               </Route>
