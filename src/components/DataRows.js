@@ -2,8 +2,7 @@ import DeleteData from "./DeleteData";
 import { useCrudContext } from "./CrudContext";
 
 
-
-export default function DataRows() {
+const DataRows = () => {
     const { data } = useCrudContext();
     return data.map(item => (
         <tr key={item.id}>
@@ -19,3 +18,5 @@ export default function DataRows() {
         </tr>
     ));
 }
+
+export default DataRows;

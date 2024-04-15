@@ -20,56 +20,38 @@ function App() {
         <Navbar />
         <div className="App">
             <Switch>
-              <Route path="/" exact component={Home} />
+              <Route path="/" exact component={Home}>
+                <div className="Form">
+                  <CrudProvider>
+                    <h1>Scheduling System</h1>
+                      <Form/>
+                        <hr/>
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>Bus Name</th>
+                                <th>Starting Point</th>
+                                <th>Time</th>
+                                <th>End Point</th>
+                                <th>Time</th>
+                                <th>Date</th>
+                              </tr>
+                            </thead>
+                              <tbody>
+                                <DataRows/>
+                              </tbody>
+                          </table>
+                  </CrudProvider>
+                </div>
+              </Route>
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
             </Switch>
         </div>
       </NavbarProvider>
     </Router>
-    <div className="Form">
-      <CrudProvider>
-        <h1>Scheduling System</h1>
-          <Form/>
-            <hr/>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Bus Name</th>
-                    <th>Starting Point</th>
-                    <th>Time</th>
-                    <th>End Point</th>
-                    <th>Time</th>
-                    <th>Date</th>
-                  </tr>
-                </thead>
-                  <tbody>
-                    <DataRows/>
-                  </tbody>
-              </table>
-      </CrudProvider>
-    </div>
   </>
   );
 }
-
-// function DataRows() {
-//   const { data } = useCrudContext();
-
-
-//   return data.map(item => (
-//     <tr key={item.id}>
-//       <td>{item.name}</td>
-//       <td>{item.spoint}</td>
-//       <td>{item.time}</td>
-//       <td>{item.epoint}</td>
-//       <td>{item.etime}</td>
-//       <td>{item.date}</td>
-//       <td>
-//         <DeleteData id={item.id} />
-//       </td>
-//     </tr>
-//   ));
-// }
 
 export default App;
