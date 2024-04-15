@@ -5,10 +5,10 @@ import { NavbarProvider } from "./components/NavbarContext";
 import { CrudProvider} from "./components/CrudContext";
 import Form from "./components/Form";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import DataRows from "./components/DataRows";
+import Home from "./components/PageComponent/Home";
+import About from "./components/PageComponent/About";
+import Contact from "./components/PageComponent/Contact";
+import TableComponent from "./components/TableComponent";
 
 function App() {
 
@@ -26,21 +26,7 @@ function App() {
                     <h1>Scheduling System</h1>
                       <Form/>
                         <hr/>
-                          <table>
-                            <thead>
-                              <tr>
-                                <th>Bus Name</th>
-                                <th>Starting Point</th>
-                                <th>Time</th>
-                                <th>End Point</th>
-                                <th>Time</th>
-                                <th>Date</th>
-                              </tr>
-                            </thead>
-                              <tbody>
-                                <DataRows/>
-                              </tbody>
-                          </table>
+                        <TableComponent />
                   </CrudProvider>
                 </div>
               </Route>
