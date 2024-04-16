@@ -1,4 +1,4 @@
-.App {
+/* .App {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,3 +102,51 @@ li a:hover {
   background-color: rgb(40, 211, 49);
 }
    */
+
+.App{
+    @apply flex flex-col items-center justify-center;
+  }
+
+.Form{
+  @apply flex flex-col items-center p-4 justify-center;
+}
+
+h1{
+  @apply text-center font-sans border-b-2 border-blue-500;
+}
+
+input{
+  @apply text-center;
+}
+
+table{
+  @apply w-full table-auto relative;
+}
+
+td{
+  @apply border border-black text-left p-2;
+}
+
+th{
+  @apply border border-black text-left p-2;
+}
+
+button{
+  @apply bg-blue-500 hover:bg-blue-600 active:bg-blue-400 text-black px-8 py-4 text-center text-base rounded-md cursor-pointer;
+}
+
+tr{
+  @apply bg-gray-300;
+}
+
+ul{
+  @apply flex items-center bg-gray-900;
+}
+
+li{
+  @apply block text-white text-center py-3 px-4 no-underline;
+}
+
+Link{
+  @apply block text-white text-center py-3 px-4 no-underline hover:bg-gray-700;
+}

@@ -11,9 +11,7 @@ const CrudContext = createContext();
         const savedData = localStorage.getItem('data');
         return savedData ? JSON.parse(savedData) : [{ id: "", name: "", spoint: "", time: "", epoint: "", etime: "", date: "" }];
     });
-    // const [formData, setFormData] = useState({ id: "", name: "", spoint: "", time: "", epoint: "", etime: "", date: "" });
-    // const [isEditing, setIsEditing] = useState(false);
-
+    
         const addData = newData => {
             setData([...data, { ...newData, id: uuidv4() }]);
     };

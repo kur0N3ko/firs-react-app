@@ -31,7 +31,7 @@ import DeleteData from './DeleteData';
     }
 
   return (
-    <>
+    <div className='Form'>
     {/* to handle data inputs */}
       <form onSubmit={handleSubmit}>
         <input type="hidden" name="id" value={formData.id} onChange={handleChange} />
@@ -65,14 +65,14 @@ import DeleteData from './DeleteData';
               <td>{item.etime}</td>
               <td>{item.date}</td>
               <td>
-                <button onClick={() => handleEdit(item.id)}>Edit</button>
-                <DeleteData id={item.id} />
+                <button onClick={() => handleEdit(item.id)}>Edit</button> {/*to handle editing info*/}
+                <DeleteData id={item.id} /> {/*to delete an item*/}
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
 
