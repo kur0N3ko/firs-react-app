@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom/cjs/rea
 import Home from "./components/PageComponent/Home";
 import About from "./components/PageComponent/About";
 import Contact from "./components/PageComponent/Contact";
+import TaskPage from "./components/PageComponent/TaskPage";
 
 function App() {
   return (
@@ -18,16 +19,21 @@ function App() {
         <div className="App">
             <Switch>
               <Route path="/" exact component={Home}>
-                <div className="Form">
-                  <hr/>
-                  <CrudProvider>
-                    <h2>Scheduling System</h2>
-                      <Form/>
-                  </CrudProvider>
+                <div>
+                  <Home/>
                 </div>
               </Route>
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
+              <Route path="/taskpage" component={TaskPage} >
+                <div className="Form">
+                    <h1>Sheduling System</h1>
+                    <br/>
+                      <CrudProvider>
+                        <Form/>
+                      </CrudProvider>
+                </div>
+              </Route>
             </Switch>
         </div>
       </NavbarProvider>

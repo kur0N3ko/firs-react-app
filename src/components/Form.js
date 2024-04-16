@@ -64,8 +64,10 @@ import DeleteData from './DeleteData';
               <td>{item.epoint}</td>
               <td>{item.etime}</td>
               <td>{item.date}</td>
-              <td><button onClick={() => handleEdit(item.id)}>Edit</button>
-              <DeleteData id={item.id} /></td>
+              <td>
+                <button onClick={() => handleEdit(item.id)}>Edit</button>
+                <DeleteData id={item.id} />
+              </td>
             </tr>
           ))}
         </tbody>
