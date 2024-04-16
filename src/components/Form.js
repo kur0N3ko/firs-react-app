@@ -55,7 +55,7 @@ import DeleteData from './DeleteData';
               <th>Date</th>
             </tr>
           </thead>
-        <tbody> 
+        <tbody className='table-striped'> 
           {/* to find an item according to it's id */}
           {data.map(item => (
             <tr key={item.id}>

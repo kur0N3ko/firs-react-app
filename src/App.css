@@ -3,7 +3,7 @@
 }
 
 h1{
-  @apply text-center font-sans border-b-2 border-blue-500;
+  @apply text-2xl text-center font-sans border-b-2 border-blue-500 font-bold;
 }
 
 input{
@@ -26,8 +26,8 @@ button{
   @apply bg-blue-500 hover:bg-blue-600 active:bg-blue-400 text-black px-8 py-4 text-center text-base rounded-md cursor-pointer;
 }
 
-tr{
-  @apply bg-gray-300;
+tr:nth-child(even){
+  @apply bg-blue-200;
 }
 
 ul{
@@ -37,7 +37,3 @@ ul{
 li{
   @apply block text-white text-center py-3 px-4 no-underline active:bg-lime-400 hover:bg-gray-400;
 }
-
-/* .Navigation{
-  @apply flex  items-center space-x-4 bg-gray-900 p-4;
-} */
