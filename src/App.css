@@ -1,114 +1,5 @@
-/* .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.Form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-form {
-  padding-bottom: 10px;
-  border-spacing: 2px;
-}
-
-div {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-h1 {
-  text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  border-bottom: #4a5bf4 solid 3px;
-}
-
-input {
-  font: 1em sans-serif;
-  text-align: center;
-}
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  position: relative;
-}
-
-td, th {
-  border: 2px solid #000000;
-  text-align: left;
-  padding: 8px;
-}
-
-button {
-  background-color: #2293f5;
-  border: none;
-  color: rgb(0, 0, 0);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  color: rgb(0, 0, 0);
-  background-color: rgb(0, 187, 255);
-}
-
-button:active {
-  color: rgb(9, 231, 168);
-  background-color: rgb(83, 205, 183);
-}
-
-tr:nth-child(even) {
-  background-color: #c8d6dd;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #907a76;
-}
-
-/* Link {
-  background-color: rgb(40, 211, 49);
-}
-   */
-
-.App{
-    @apply flex flex-col items-center justify-center;
-  }
-
 .Form{
-  @apply flex flex-col items-center p-4 justify-center;
+  @apply flex flex-col items-center border-b-2 border-blue-400 p-4 justify-center;
 }
 
 h1{
@@ -116,7 +7,7 @@ h1{
 }
 
 input{
-  @apply text-center;
+  @apply text-center border-l-2 border-spacing-5 p-2 border-blue-400;
 }
 
 table{
@@ -140,13 +31,13 @@ tr{
 }
 
 ul{
-  @apply flex items-center bg-gray-900;
+  @apply flex justify-start items-center bg-gray-900;
 }
 
 li{
-  @apply block text-white text-center py-3 px-4 no-underline;
+  @apply block text-white text-center py-3 px-4 no-underline active:bg-lime-400 hover:bg-gray-400;
 }
 
-Link{
-  @apply block text-white text-center py-3 px-4 no-underline hover:bg-gray-700;
-}
+/* .Navigation{
+  @apply flex  items-center space-x-4 bg-gray-900 p-4;
+} */

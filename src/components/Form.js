@@ -43,6 +43,7 @@ import DeleteData from './DeleteData';
         <input type="date" name="date" value={formData.date} onChange={handleChange} placeholder="Date" required />
         <button type="submit">{formData.id ? 'Update' : 'Add'}</button>
       </form>
+      <br/>
       <table>
         <thead>
             <tr>
