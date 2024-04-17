@@ -7,6 +7,7 @@ export const useContactStore = create((set) => ({
         if (!existingContact) {
             const updatedContacts = [...state.contacts, contact];
             localStorage.setItem('contacts', JSON.stringify(updatedContacts));
+            alert('A Contact has been added successfully!');
             return { contacts: updatedContacts };
         } else {
             alert('Contact already exists:', contact.email);

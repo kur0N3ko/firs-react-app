@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../Navbar';
-import {useContactStore} from '../StoreFolder/useContactStore';
+import { useContactStore } from '../StoreFolder/useContactStore';
 
 function Contact() {
 
@@ -9,6 +9,7 @@ function Contact() {
     const [email, setEmail] = useState('');
 
     const addContact = useContactStore((state) => state.addContact);
+    const contacts = useContactStore((state) => state.contacts);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -47,6 +48,24 @@ function Contact() {
                 />
                 <button type="submit">Add Contact</button>
             </form>
+            <table className='ContactTable'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact Number</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {contacts.map((contact) => (
+                        <tr key={contact.email}>
+                            <td>{contact.name}</td>
+                            <td>{contact.number}</td>
+                            <td>{contact.email}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
     
