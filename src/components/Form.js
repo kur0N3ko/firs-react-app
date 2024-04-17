@@ -18,6 +18,7 @@ import DeleteData from './DeleteData';
     alert('Successfully updated.');
     } else {
         // Add new record
+        
     addData(formData);
     alert('Successfully added.');
     }
@@ -67,7 +68,7 @@ import DeleteData from './DeleteData';
               <td>{item.date}</td>
               <td>
                 <button onClick={() => handleEdit(item.id)}>Edit</button> {/*to handle editing info*/}
-                <DeleteData id={item.id} /> {/*to delete an item*/}
+                <DeleteData id={item.id} /> {/*to delete an item, from DeleteData.js*/}
               </td>
             </tr>
           ))}
