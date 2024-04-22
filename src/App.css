@@ -37,3 +37,4 @@ ul{
 li{
   @apply block text-white text-center py-3 px-4 no-underline active:bg-lime-400 hover:bg-gray-400;
 }
+
