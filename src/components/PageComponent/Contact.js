@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../Navbar';
 import { useContactStore } from '../StoreFolder/useContactStore';
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input, Table } from 'antd';
 
 function Contact() {
     const [form] = Form.useForm();
@@ -10,8 +10,35 @@ function Contact() {
     const [lname, setLName] = useState('');
     const [number, setNumber] = useState('');
     const [email, setEmail] = useState('');
+    
+    const columns = [
+        {
+            title: 'User Name',
+            dataIndex: 'uname',
+            key: 'uname',
+        },
+        {
+            title: 'First Name',
+            dataIndex: 'fname',
+            key: 'fname',
+        },
+        {
+            title: 'Last Name',
+            dataIndex: 'lname',
+            key: 'lname',
+        },
+        {
+            title: 'Contact Number',
+            dataIndex: 'number',
+            key: 'number',
+        },
+        {
+            title: 'Email',
+            dataIndex: 'email',
+            key: 'email',
+        },
+    ];
 
-    //
     const addContact = useContactStore((state) => state.addContact);
     const contacts = useContactStore((state) => state.contacts);
 
@@ -45,29 +72,7 @@ function Contact() {
                         <Button type="primary" htmlType="submit">Add Contact</Button>
                     </Form.Item>
                 </Form>
-
-            <table className="w-4/5 ml-10 border-collapse border border-gray-300">
-                <thead>
-                    <tr className="bg-gray-200">
-                        <th className="border border-gray-300 py-2 px-4">User Name</th>
-                        <th className="border border-gray-300 py-2 px-4">First Name</th>
-                        <th className="border border-gray-300 py-2 px-4">Last Name</th>
-                        <th className="border border-gray-300 py-2 px-4">Contact Number</th>
-                        <th className="border border-gray-300 py-2 px-4">Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {contacts.map((contact) => (
-                        <tr key={contact.email} className="hover:bg-gray-100">
-                            <td className="border border-gray-300 py-2 px-4">{contact.uname}</td>
-                            <td className="border border-gray-300 py-2 px-4">{contact.fname}</td>
-                            <td className="border border-gray-300 py-2 px-4">{contact.lname}</td>
-                            <td className="border border-gray-300 py-2 px-4">{contact.number}</td>
-                            <td className="border border-gray-300 py-2 px-4">{contact.email}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+                <Table dataSource={contacts} columns={columns} />
         </div>
     );
 }
@@ -115,3 +120,25 @@ export default Contact;
 //         Add Contact
 //     </button>
 // </form> */}
+// {/* <table className="w-4/5 ml-10 border-collapse border border-gray-300">
+//     <thead>
+//         <tr className="bg-gray-200">
+//             <th className="border border-gray-300 py-2 px-4">User Name</th>
+//             <th className="border border-gray-300 py-2 px-4">First Name</th>
+//             <th className="border border-gray-300 py-2 px-4">Last Name</th>
+//             <th className="border border-gray-300 py-2 px-4">Contact Number</th>
+//             <th className="border border-gray-300 py-2 px-4">Email</th>
+//         </tr>
+//     </thead>
+//     <tbody>
+//         {contacts.map((contact) => (
+//             <tr key={contact.email} className="hover:bg-gray-100">
+//                 <td className="border border-gray-300 py-2 px-4">{contact.uname}</td>
+//                 <td className="border border-gray-300 py-2 px-4">{contact.fname}</td>
+//                 <td className="border border-gray-300 py-2 px-4">{contact.lname}</td>
+//                 <td className="border border-gray-300 py-2 px-4">{contact.number}</td>
+//                 <td className="border border-gray-300 py-2 px-4">{contact.email}</td>
+//             </tr>
+//         ))}
+//     </tbody>
+// </table> */}
